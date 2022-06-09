@@ -65,5 +65,24 @@ module CarsXEApi
       end
     end
 
+    def history(vin, options={format: 'json'})
+      uri = URI("#{@@base_url}/history")
+      params = {key: @@api_key, vin: vin}
+      params.merge!(options)
+      uri.query = URI.encode_www_form(params)
+      response = @http.get_response(uri)
+      if response.code == "200"
+        {
+          success: true,
+          data: JSON.parse(response.body)
+        }
+      else
+        {
+          success: false,
+          data: {}
+        }
+      end
+    end
+
   end
 end
