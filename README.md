@@ -14,8 +14,22 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+#### Declare client
 
+```ruby
+client = CarsxeApi::Client.new(ENV['CARS_XE_API_KEY'])
+```
+
+#### Plate Decoder
+
+```ruby
+data = client.plate_decoder('HOWDY12', 'TX')
+```
+
+#### Market Value
+```ruby 
+data = client.market_value('ENTER_VIN_HERE')
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
