@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "lib/carsxe_api/version"
+require 'net/http'
 
 Gem::Specification.new do |spec|
   spec.name = "carsxe_api"

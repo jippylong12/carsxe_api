@@ -8,6 +8,7 @@ class TestCarsxeApi < Minitest::Test
   end
 
   def test_it_does_something_useful
+    api = CarsxeApi::Client.new('HOWDY')
     assert false
   end
 end
