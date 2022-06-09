@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'json'
+require 'dotenv/load'
 
 require_relative "carsxe_api/version"
 

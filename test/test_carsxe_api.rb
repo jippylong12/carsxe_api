@@ -8,7 +8,8 @@ class TestCarsxeApi < Minitest::Test
   end
 
   def test_it_does_something_useful
-    api = CarsxeApi::Client.new('HOWDY')
-    assert false
+    api = CarsxeApi::Client.new(ENV['CARS_XE_API_KEY'])
+    data = api.vehicle_plate_decoder('666DDW', 'TX')
+    assert data[:success] == false
   end
 end
