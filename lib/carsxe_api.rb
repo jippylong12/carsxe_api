@@ -3,7 +3,8 @@ require 'json'
 
 begin
   require 'dotenv/load'
-rescue
+rescue LoadError
+
 end
 
 require_relative "carsxe_api/version"
