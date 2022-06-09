@@ -1,4 +1,4 @@
-module CarsxeApi
+module CarsXEApi
   class Client
     @@base_url = 'https://api.carsxe.com'
     @@api_key = ''

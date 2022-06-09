@@ -17,7 +17,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 #### Declare client
 
 ```ruby
-client = CarsxeApi::Client.new(ENV['CARS_XE_API_KEY'])
+client = CarsXEApi::Client.new(ENV['CARS_XE_API_KEY'])
 ```
 
 #### Plate Decoder
@@ -40,4 +40,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CarsxeApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/jippylong12/carsxe_api/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the CarsXEApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/jippylong12/carsxe_api/blob/master/CODE_OF_CONDUCT.md).

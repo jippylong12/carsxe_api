@@ -5,7 +5,7 @@ require 'net/http'
 
 Gem::Specification.new do |spec|
   spec.name = "carsxe_api"
-  spec.version = CarsxeApi::VERSION
+  spec.version = CarsXEApi::VERSION
   spec.authors = ["marcus.salinas"]
   spec.email = ["12.marcus.salinas@gmail.com"]
 
