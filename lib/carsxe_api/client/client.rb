@@ -26,25 +26,44 @@ module CarsXEApi
         }
       end
     end
-  end
 
-  def market_value(vin, options={format: 'json'})
-    uri = URI("#{@@base_url}/marketvalue")
-    params = {key: @@api_key, vin: vin}
-    params.merge!(options)
-    uri.query = URI.encode_www_form(params)
-    response = @http.get_response(uri)
-    if response.code == "200"
-      {
-        success: true,
-        data: JSON.parse(response.body)
-      }
-    else
-      {
-        success: false,
-        data: {}
-      }
+    def market_value(vin, options={format: 'json'})
+      uri = URI("#{@@base_url}/marketvalue")
+      params = {key: @@api_key, vin: vin}
+      params.merge!(options)
+      uri.query = URI.encode_www_form(params)
+      response = @http.get_response(uri)
+      if response.code == "200"
+        {
+          success: true,
+          data: JSON.parse(response.body)
+        }
+      else
+        {
+          success: false,
+          data: {}
+        }
+      end
     end
-  end
 
+    def specifications(vin, options={format: 'json'})
+      uri = URI("#{@@base_url}/specs")
+      params = {key: @@api_key, vin: vin}
+      params.merge!(options)
+      uri.query = URI.encode_www_form(params)
+      response = @http.get_response(uri)
+      if response.code == "200"
+        {
+          success: true,
+          data: JSON.parse(response.body)
+        }
+      else
+        {
+          success: false,
+          data: {}
+        }
+      end
+    end
+
+  end
 end

@@ -9,7 +9,8 @@ class TestCarsXEApi < Minitest::Test
 
   def test_it_does_something_useful
     client = CarsXEApi::Client.new(ENV['CARS_XE_API_KEY'])
-    data = client.plate_decoder('666DDW', 'TX')
+    data = client.market_value('666DDW')
+    puts data
     assert data[:success] == false
   end
 end

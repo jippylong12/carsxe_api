@@ -1,10 +1,13 @@
 ## [Unreleased]
-- Specifications
 - History
 - Images
 - What Car is That
 - Plate Recognition
 - OBD Codes Decoder
+
+## [0.1.3] - 2022-06-09
+- Fixed bug where I put the market value function outside the class
+- Added specifications API
 
 ## [0.1.2] - 2022-06-09
 - Actually fixed dotenv issue
